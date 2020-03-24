@@ -15,7 +15,7 @@ export default{
               //backgroundColor:['aqua','lightgreen','red','orange'],
               borderWidth:0.5,
               borderColor:"orange",
-              backgroundColor:'orange',
+              backgroundColor:'red',
               fill:false
             }
           ]

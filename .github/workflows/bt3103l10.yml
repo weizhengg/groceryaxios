@@ -9,17 +9,17 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout Repo
-      uses: actions/checkout@master
-    - name: Install Dependencies
-      run: npm install
-    - name: Build
-      run: npm run build
-    - name: Archive Production Artifact
-      uses: actions/upload-artifact@master
-      with:
-        name: dist
-        path: dist
+      - name: Checkout Repo
+        uses: actions/checkout@master
+      - name: Install Dependencies
+        run: npm install
+      - name: Build
+        run: npm run build
+      - name: Archive Production Artifact
+        uses: actions/upload-artifact@master
+    with:
+      name: dist
+      path: dist
   deploy:
     name: Deploy
     needs: build
@@ -36,4 +36,4 @@ jobs:
         with:
           args: deploy --only hosting
         env:
-          FIREBASE_TOKEN: ${{ secrets.1//0glqUTNIDxc9OCgYIARAAGBASNwF-L9IrsgCyu_Fr7vIG8PpekNLQhVIgpyeJ-GBn89M9TSJopJL-pgWHoMAiXseQjKJEzLcBwSM }}
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
