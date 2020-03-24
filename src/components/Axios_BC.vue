@@ -6,8 +6,10 @@
         </div>
          <div id="chart">
             <PSIIndex></PSIIndex>
-        
         </div>
+        <!-- <div id = "chart">   
+            <axiosProblem3></axiosProblem3>
+        </div> -->
         
     </div>
 </template>
@@ -15,7 +17,7 @@
 <script>
 import axiosExample from '../axiosExample.js'
 import PSIIndex from '../PSIIndex.js'
-
+// import axiosProblem3 from '../axiosProblem3.js'
 export default {
     components:{
         axiosExample,PSIIndex
